@@ -1,0 +1,56 @@
+@apiUrl=http://localhost:5253/api/auth
+
+
+#### ADMIN
+### Get login
+POST {{apiUrl}}/admin/login
+Content-Type: application/json
+
+{
+    "email": "admin6@gmail.com",
+    "password": "123456"
+}
+
+### register 
+POST {{apiUrl}}/admin/register
+Content-Type: application/json
+
+{
+    "Name": "admin1",
+    "email": "admin7@gmail.com",
+    "password": "123456"
+}
+
+
+### register merchant
+POST {{apiUrl}}/merchant/register
+Content-Type: application/json
+
+{
+  "Name": "merchant1",
+  "Password": "123456",
+  "Email": "merchant5@gmail.com",
+  "Address": "string",
+  "ShopName": "string",
+  "ShopCategory": "Food",
+  "SubCategories": [
+    "snack", "beverage"
+  ],
+  "PhoneNumber": "string",
+  "Country": "string",
+  "CommissionRate": 0,
+  "ContactNumber": "string",
+  "WebsiteUrl": "string",
+  "Description": "string",
+  "Longitude": "string",
+  "Latitude": "string",
+  "OperationTimes": [
+     {
+      "Day": "Thursday",
+      "StartTime": "1600",
+      "EndTime": "1800",
+      "IsOffday": true
+    }
+  ]
+}
+

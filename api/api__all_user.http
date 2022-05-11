@@ -1,0 +1,38 @@
+@apiUrl=http://localhost:5253/api/user
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4ZGQ2M2E3YTM4M2Y0Y2Q3YTc4NDhmMGIwOThkYWJhNyIsIm5hbWUiOiJhZG1pbiIsInBlcm1pc3Npb25zIjoiW1wiQ2FuVmlld0FkbWluXCIsXCJDYW5FZGl0QWRtaW5cIl0iLCJuYmYiOjE2NTA3NzA5NjQsImV4cCI6MTY1MzM2Mjk2NCwiaWF0IjoxNjUwNzcwOTY0LCJhdWQiOiJrb29zYm9udXMifQ.XV9iU_x-xyPqI0o5IMPATEFp3EwOkQC_PM_JxPcx6t4
+### Get admin user list
+GET {{apiUrl}}/admin?pageSize=12&currentPage=1&sortBy=status&sortOrder=asc
+Authorization: Bearer {{token}}
+
+### get page size
+GET {{apiUrl}}/admin/pageSize?pageSize=3
+Authorization: Bearer {{token}}
+
+
+### approve admin
+PUT {{apiUrl}}/admin/approve
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "userId": "5036e28a22ed459ebab15d2718331f2d"
+}
+
+### freeze admin
+PUT {{apiUrl}}/admin/freeze
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "userId": "5036e28a22ed459ebab15d2718331f2d"
+}
+
+
+### reject admin
+PUT {{apiUrl}}/admin/reject
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "userId": "5036e28a22ed459ebab15d2718331f2d"
+}

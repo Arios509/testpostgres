@@ -1,0 +1,37 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{3FE52CFC-8C68-4D61-AB09-871F07711C61}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Domain\Domain.csproj", "{7C2D9798-D021-4D23-977E-EABB1EF3F518}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{5EA8FA43-D10A-47BB-AA62-B3BBEDC0E510}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FE52CFC-8C68-4D61-AB09-871F07711C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FE52CFC-8C68-4D61-AB09-871F07711C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FE52CFC-8C68-4D61-AB09-871F07711C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FE52CFC-8C68-4D61-AB09-871F07711C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2D9798-D021-4D23-977E-EABB1EF3F518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2D9798-D021-4D23-977E-EABB1EF3F518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2D9798-D021-4D23-977E-EABB1EF3F518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2D9798-D021-4D23-977E-EABB1EF3F518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EA8FA43-D10A-47BB-AA62-B3BBEDC0E510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EA8FA43-D10A-47BB-AA62-B3BBEDC0E510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EA8FA43-D10A-47BB-AA62-B3BBEDC0E510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EA8FA43-D10A-47BB-AA62-B3BBEDC0E510}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BCCAAD7-EB58-4D44-8856-84A208EC9627}
+	EndGlobalSection
+EndGlobal
