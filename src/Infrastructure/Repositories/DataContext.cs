@@ -7,7 +7,7 @@ namespace Api.Infrastructure.Repositories
 {
     public class DataContext : DbContext
     {
-        public DbSet<User> User { get; set; }
+        public DbSet<TestingUser> TestingUser { get; set; }
 
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {

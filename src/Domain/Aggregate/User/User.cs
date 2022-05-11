@@ -5,13 +5,18 @@ using System.Data;
 
 namespace Domain.Aggregate.User
 {
-    public class User
+    public class TestingUser
     {
         [Column(TypeName = "jsonb")]
         public Detail Detail { get; private set; }
-        public User(Detail detail)
+       
+        [Column(TypeName = "jsonb")]
+        public Detail[] Details { get; private set; }
+        public TestingUser() { }
+        public TestingUser(Detail detail, Detail[] details = null)
         {
             Detail = detail;
+            Details = new List<Detail>().ToArray();
         }
     }
 

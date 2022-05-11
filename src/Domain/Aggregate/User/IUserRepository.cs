@@ -2,7 +2,7 @@
 {
     public interface IUserRepository
     {
-        Task<User> Get();
-        Task<long> Add(User user);
+        Task<TestingUser> Get();
+        Task<long> Add(TestingUser user);
     }
 }

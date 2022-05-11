@@ -22,14 +22,19 @@ namespace Api.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Domain.Aggregate.User.User", b =>
+            modelBuilder.Entity("Domain.Aggregate.User.TestingUser", b =>
                 {
                     b.Property<Detail>("Detail")
                         .IsRequired()
                         .HasColumnType("jsonb")
                         .HasColumnName("detail");
 
-                    b.ToTable("user", (string)null);
+                    b.Property<Detail[]>("Details")
+                        .IsRequired()
+                        .HasColumnType("jsonb")
+                        .HasColumnName("details");
+
+                    b.ToTable("testinguser", (string)null);
                 });
 #pragma warning restore 612, 618
         }

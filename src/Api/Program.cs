@@ -63,6 +63,7 @@ builder.Services.AddCors(options =>
 });
 
 SqlMapper.AddTypeHandler(typeof(Detail), new JsonTypeHandler());
+SqlMapper.AddTypeHandler(typeof(Detail[]), new JsonTypeHandler());
 
 var app = builder.Build();
 

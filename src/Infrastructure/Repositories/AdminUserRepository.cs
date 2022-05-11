@@ -14,29 +14,29 @@ namespace Infrastructure.Repositories
             _baseRepository = baseRepository;
         }
 
-        public async Task<User> Get()
+        public async Task<TestingUser> Get()
         {
-            var query = new StringBuilder();
+            var query = $"""
+                select * from {nameof(TestingUser)} limit 1
+                """;
 
-            query.Append($"select * from {nameof(User)} limit 1");
-
-            var result = await _baseRepository.Get<User>(query.ToString(), null, commandType: System.Data.CommandType.Text);
+            var result = await _baseRepository.Get<TestingUser>(query.ToString(), null, commandType: System.Data.CommandType.Text);
 
             return result;
         }
 
-        public async Task<long> Add(User user)
+        public async Task<long> Add(TestingUser user)
         {
             var query = $"""
-                INSERT INTO {nameof(User)} 
-                ({nameof(User.Detail)}) VALUES 
-                (@{nameof(User.Detail)})
+                INSERT INTO {nameof(TestingUser)} 
+                ({nameof(TestingUser.Detail)}, {nameof(TestingUser.Details)}) VALUES 
+                ({JsonSerializer.Serialize(user.Detail)}, '{JsonSerializer.Serialize(user.Details)}')
                 """;
 
             var parameters = new DynamicParameters();
-            parameters.Add(nameof(User.Detail), user.Detail);
+            parameters.Add(nameof(TestingUser.Detail), JsonSerializer.Serialize(user.Detail));
 
-            var result = await _baseRepository.InsertAsync<User>(query.ToString(), parameters);
+            var result = await _baseRepository.InsertAsync<TestingUser>(query.ToString(), parameters);
             return result;
         }
     }

@@ -9,9 +9,7 @@ namespace Api.Features.UserFeature
 
     public class AddUserCommand : IRequest<Result<bool, CommandErrorResponse>>
     {
-
     }
-
 
     public class AddUserCommandHandler : IRequestHandler<AddUserCommand, Result<bool, CommandErrorResponse>>
     {
@@ -28,7 +26,7 @@ namespace Api.Features.UserFeature
         {
             try
             {
-                var newUser = new User(new Detail());
+                var newUser = new TestingUser(new Detail());
 
                 await _userRepository.Add(newUser);
 
